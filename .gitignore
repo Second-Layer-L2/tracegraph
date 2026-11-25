@@ -1,2 +1,7 @@
+# Go / CLI
 *.exe
 tracegraph-cli
+
+# Frontend
+node_modules/
+dist/
