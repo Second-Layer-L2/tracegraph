@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Path
+from fastapi import FastAPI, HTTPException, Request, Path
 
 
 
@@ -25,3 +25,11 @@ async def get_case_status_by_id(case_id: int = Path(title="Case ID", gt=0)):
     if case is None:
         raise HTTPException(status_code=404, detail="Case not found")  # Return 404 when no case matches the requested ID.
     return {"id": case_id, "status": case["status"]}
+
+
+@app.post("/cases", summary="Upload a case")
+async def upload_case(request: Request):
+
+    archive_bytes = await request.body()
+
+    return {"received_bytes": len(archive_bytes)}
