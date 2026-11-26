@@ -5,3 +5,7 @@ tracegraph-cli
 # Frontend
 node_modules/
 dist/
+
+# Backend
+.venv/
+__pycache__/
