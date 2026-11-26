@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-10-12T12:14:00Z",
+  "description": "Suspicious outbound connection",
+  "severity": 3,
+  "src_ip": "192.168.1.105",
+  "dst_ip": "10.0.0.8"
+}
